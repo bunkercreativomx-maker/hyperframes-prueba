@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Don Punto — Historias de Éxito</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 40px 20px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    h1 { text-align: center; color: white; margin-bottom: 30px; font-size: 2.5rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.4); }
+    .card-image { width: 100%; aspect-ratio: 9/16; object-fit: cover; background: #f0f0f0; }
+    .card-info { padding: 15px; }
+    .card-title { font-weight: 600; font-size: 1.1rem; color: #333; margin-bottom: 10px; }
+    .btn { display: inline-block; padding: 10px 15px; background: #667eea; color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; text-decoration: none; margin-right: 10px; }
+    .btn:hover { background: #5568d3; }
+    .footer { text-align: center; color: rgba(255,255,255,0.7); margin-top: 80px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📖 Historias de Éxito Don Punto</h1>
+    <div class="grid" id="grid"></div>
+    <div class="footer">
+      <p>Historias auténticas de comerciantes que transformaron su negocio con Don Punto</p>
+    </div>
+  </div>
+
+  <script>
+    const videos = [
+      { name: "beto", title: "Beto" },
+      { name: "ivan", title: "Iván" },
+      { name: "mago", title: "Mago" },
+      { name: "rosy", title: "Rosy" },
+      { name: "sofi", title: "Sofi" }
+    ];
+
+    const grid = document.getElementById("grid");
+    videos.forEach(v => {
+      const mp4 = `donpunto-historias-${v.name}.mp4`;
+      const poster = `poster-${v.name}.jpg`;
+      const html = `
+        <div class="card">
+          <img src="${poster}" alt="${v.title}" class="card-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22496%22%3E%3Crect fill=%22%23e0e0e0%22 width=%22280%22 height=%22496%22/%3E%3C/svg%3E'">
+          <div class="card-info">
+            <div class="card-title">Testimonio: ${v.title}</div>
+            <a href="${mp4}" download class="btn">Descargar</a>
+            <a href="#" onclick="alert('Abre en navegador: ${mp4}')" class="btn">Ver</a>
+          </div>
+        </div>
+      `;
+      grid.innerHTML += html;
+    });
+  </script>
+</body>
+</html>
