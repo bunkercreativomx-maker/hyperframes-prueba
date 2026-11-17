@@ -1,0 +1,56 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 reels gancho</title>
+<style>body{margin:0;background:#0b0f0d;color:#fff;font:16px system-ui}main{max-width:1200px;margin:auto;padding:24px 16px 60px}h1{margin:0 0 6px}p{color:#b9c6bf}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}article{background:#141b17;border-radius:18px;padding:14px}h2{font-size:17px;margin:4px 0 10px}
+video{width:100%;border-radius:12px;background:#000}.b{display:flex;gap:8px;margin:10px 0}a,button{flex:1;text-align:center;padding:11px;border-radius:999px;background:#f5b323;color:#0b0f0d;font-weight:800;text-decoration:none;border:0;font-size:14px;cursor:pointer}
+pre{white-space:pre-wrap;background:#0b0f0d;padding:12px;border-radius:10px;color:#cdeedf;font:13px/1.45 system-ui;margin:0}#zip{display:inline-block;flex:none;padding:12px 22px;margin:8px 0 18px}</style>
+<main><h1>5 reels: gancho «a punto de caerse»</h1><p>Borradores para revisión. 8.6 s cada uno, 1080×1920, música + whoosh en cada corte, sin voz. Los ganchos son video propio generado con IA (sin usar el video de referencia).</p>
+<button id="zip" onclick="zipAll()">Descargar los 5 (ZIP)</button><div class="g"><article><h2>1. Bunker Creativo · comenta “WEB”</h2><video controls playsinline preload="metadata" src="01_v1-bunker-web.mp4"></video>
+<div class="b"><a href="01_v1-bunker-web.mp4" download>Descargar MP4</a><button onclick="cp(this)">Copiar caption</button></div><pre>¿Tu negocio necesita una web? 👀
+
+Una página que vende, se ve profesional y aparece en Google. Trabaja por ti aunque tengas cerrado.
+
+💬 Comenta “WEB” y te mandamos la info por mensaje.
+
+#BunkerCreativo #PaginasWeb #ElPaso #Juarez</pre></article>
+<article><h2>2. Bunker Creativo · comenta “WEB”</h2><video controls playsinline preload="metadata" src="02_v2-bunker-google.mp4"></video>
+<div class="b"><a href="02_v2-bunker-google.mp4" download>Descargar MP4</a><button onclick="cp(this)">Copiar caption</button></div><pre>Te buscan en Google… y le compran a tu competencia. 📉
+
+Sin página web, para el cliente nuevo no existes.
+
+💬 Comenta “WEB” y te mandamos la info por mensaje.
+
+#BunkerCreativo #PaginasWeb #ElPaso #Juarez</pre></article>
+<article><h2>3. Bunker Creativo · comenta “REDES”</h2><video controls playsinline preload="metadata" src="03_v3-bunker-redes.mp4"></video>
+<div class="b"><a href="03_v3-bunker-redes.mp4" download>Descargar MP4</a><button onclick="cp(this)">Copiar caption</button></div><pre>Si te ves barato, cobras barato. 🎯
+
+Diseño para redes que hace que tu negocio se vea como lo que vale.
+
+💬 Comenta “REDES” y te mandamos la info por mensaje.
+
+#BunkerCreativo #DiseñoParaRedes #ElPaso #Juarez</pre></article>
+<article><h2>4. Don Punto · comenta “CAJA”</h2><video controls playsinline preload="metadata" src="04_v4-donpunto-caja.mp4"></video>
+<div class="b"><a href="04_v4-donpunto-caja.mp4" download>Descargar MP4</a><button onclick="cp(this)">Copiar caption</button></div><pre>¿Cierras el día y la caja no cuadra? 💸
+
+Con Don Punto cada venta queda registrada y haces tu corte en minutos.
+
+Regístrate y pruébalo 15 días gratis, sin tarjeta: donpunto.com
+
+💬 Comenta “CAJA” y te mandamos el link.
+
+#DonPunto #PuntoDeVenta #Restaurantes</pre></article>
+<article><h2>5. Don Punto · comenta “CAJA”</h2><video controls playsinline preload="metadata" src="05_v5-donpunto-ticket.mp4"></video>
+<div class="b"><a href="05_v5-donpunto-ticket.mp4" download>Descargar MP4</a><button onclick="cp(this)">Copiar caption</button></div><pre>¿Cuánto vendiste hoy? ¿Seguro? 🧾
+
+Ventas, propinas y corte de caja en un solo lugar, desde tu celular o tablet.
+
+Regístrate y pruébalo 15 días gratis, sin tarjeta: donpunto.com
+
+💬 Comenta “CAJA” y te mandamos el link.
+
+#DonPunto #PuntoDeVenta #Restaurantes</pre></article>
+</div></main>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script><script>
+function cp(b){navigator.clipboard.writeText(b.parentNode.nextElementSibling.textContent);b.textContent='¡Copiado!';setTimeout(()=>b.textContent='Copiar caption',1500)}
+async function zipAll(){const z=new JSZip(),b=document.getElementById('zip');b.textContent='Preparando…';for(const f of ['01_v1-bunker-web.mp4', '02_v2-bunker-google.mp4', '03_v3-bunker-redes.mp4', '04_v4-donpunto-caja.mp4', '05_v5-donpunto-ticket.mp4'])z.file(f,await (await fetch(f)).blob());
+const u=URL.createObjectURL(await z.generateAsync({type:'blob'}));const a=document.createElement('a');a.href=u;a.download='reels-gancho.zip';a.click();b.textContent='Descargar los 5 (ZIP)'}
+</script></html>
