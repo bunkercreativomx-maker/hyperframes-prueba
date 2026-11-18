@@ -1,0 +1,32 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reels "el giro"</title>
+<style>body{margin:0;background:#0b0f0d;color:#fff;font:16px system-ui}main{max-width:1200px;margin:auto;padding:24px 16px 60px}h1{margin:0 0 6px}p{color:#b9c6bf}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}article{background:#141b17;border-radius:18px;padding:14px}h2{font-size:17px;margin:4px 0 10px}
+video{width:100%;border-radius:12px;background:#000}.b{display:flex;gap:8px;margin:10px 0}a,button{flex:1;text-align:center;padding:11px;border-radius:999px;background:#f5b323;color:#0b0f0d;font-weight:800;text-decoration:none;border:0;font-size:14px;cursor:pointer}
+pre{white-space:pre-wrap;background:#0b0f0d;padding:12px;border-radius:10px;color:#cdeedf;font:13px/1.45 system-ui;margin:0}#zip{display:inline-block;flex:none;padding:12px 22px;margin:8px 0 18px}</style>
+<main><h1>Reels «el giro»: pleito falso → giro → oferta</h1><p>Borradores 3 de 3. Tomas de Video Express (lipsync + b-roll), voces de CloneVoice y montaje en HyperFrames. 1080×1920.</p>
+<button id="zip" onclick="zipAll()">Descargar todos (ZIP)</button><div class="g"><article><h2>1. Las Alitas de Siempre</h2><video controls playsinline preload="metadata" src="01_giro_alitas.mp4"></video>
+<div class="b"><a href="01_giro_alitas.mp4" download>Descargar MP4</a><button onclick="cp(this)">Copiar caption</button></div><pre>¿Te ha pasado? 😤 Para que no se peleen por la última alita:
+🔥 TODOS LOS JUEVES: 1 kg de boneless + papas por $320
+📞 Llama y recoge: 656 488 7824
+📍 Plaza de las Américas, Cd. Juárez
+🕚 Todos los días 11:30 am – 7:30 pm
+#LasAlitasDeSiempre #CdJuarez #Boneless #Jueves</pre></article>
+<article><h2>2. Bunker Creativo</h2><video controls playsinline preload="metadata" src="02_giro_bunker.mp4"></video>
+<div class="b"><a href="02_giro_bunker.mp4" download>Descargar MP4</a><button onclick="cp(this)">Copiar caption</button></div><pre>Diez años con tu negocio… y en Google ni apareces 😬
+Si no te encuentran, no existes.
+Te hacemos tu página web en 72 horas: desde $5,900 + $2,400 al año (hosting y dominio).
+💬 Escríbenos por WhatsApp: 656 682 5587
+🔗 bunkercreativomx.com
+#BunkerCreativo #PaginasWeb #CdJuarez #ElPaso</pre></article>
+<article><h2>3. Don Punto</h2><video controls playsinline preload="metadata" src="03_giro_dp.mp4"></video>
+<div class="b"><a href="03_giro_dp.mp4" download>Descargar MP4</a><button onclick="cp(this)">Copiar caption</button></div><pre>¿Otra vez no te cuadra la caja? 😅
+Con Don Punto el corte de caja se hace solo y cuadra al peso.
+Planes desde $350 al mes.
+👉 donpunto.com
+#DonPunto #PuntoDeVenta #Restaurantes</pre></article>
+</div></main>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script><script>
+function cp(b){navigator.clipboard.writeText(b.parentNode.nextElementSibling.textContent);b.textContent='¡Copiado!';setTimeout(()=>b.textContent='Copiar caption',1500)}
+async function zipAll(){const z=new JSZip(),b=document.getElementById('zip');b.textContent='Preparando…';for(const f of ['01_giro_alitas.mp4', '02_giro_bunker.mp4', '03_giro_dp.mp4'])z.file(f,await (await fetch(f)).blob());
+const u=URL.createObjectURL(await z.generateAsync({type:'blob'}));const a=document.createElement('a');a.href=u;a.download='reels-giro.zip';a.click();b.textContent='Descargar todos (ZIP)'}
+</script></html>
